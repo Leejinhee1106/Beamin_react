@@ -1,0 +1,176 @@
+.bmgift {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+/* 섹션 왼쪽 */
+.gift-left {
+    width: 50%;
+    height: 100vh;
+    background-color: rgba(42, 193, 188, 0.45);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.gift-img {
+    width: 40vw;
+    max-width: 500px;
+    animation: cloud 2s ease-in-out infinite;
+}
+@keyframes cloud {
+  0% {transform: translateY(0px);}
+  50% {transform: translateY(-40px);}
+  100% {transform: translateY(0px);}
+}
+.gift-left>p {font-size:clamp(1.3rem, 6vw, 2.5rem);}
+
+/* 오른쪽 섹션 */
+.gift-right {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.gift-title {
+  font-size: clamp(1.3rem, 6vw, 3rem); /* 기본 h1 크기 */
+  text-align: center;
+}
+
+.gift-title .highlight {
+  font-size: 1.2em; /* 현재 크기보다 20% 확대 */
+  color: #2ac1bc; /* 필요 시 강조 색상 */
+  font-weight: bold;
+}
+
+.gift-text {
+    font-size: clamp(1rem, 2vw, 2.5rem);
+    text-align: center;
+}
+
+.gift-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  max-width: 700px;  /* 👈 한 줄에 3개까지만 들어가게 제한 */
+  margin: 20px auto;  /* 가운데 정렬 */
+  gap: 0px 40px;
+  justify-items: center;
+  width: 100%;
+}
+
+.gift-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gift-item img {
+  width: 20vw;
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.gift-item img:hover {
+  transform: scale(1.05);
+}
+
+.gift-item p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  color: #222;
+  font-weight: 500;
+}
+
+
+
+
+
+
+
+/* 미디어쿼리 */
+/* 1024px 이하: 위아래 정렬, 그리드는 그대로 3x2 */
+@media (max-width: 1024px) {
+  .bmgift {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .gift-left,
+  .gift-right {
+    width: 100%;
+    height: auto;
+    padding: 30px 0;
+  }
+
+  .gift-img {
+    max-width: 200px;
+  }
+
+
+  .gift-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3열 유지 */
+    max-width: 90%;
+    gap: 20px 20px;
+  }
+}
+
+/* 768px 이하: 거의 동일, 폰트 조금 조정 */
+@media (max-width: 768px) {
+  .gift-text {
+    font-size: clamp(1rem, 3vw, 1.8rem);
+  }
+
+  .gift-item img {
+    width: 28vw;
+  }
+}
+
+/* 500px 이하: 적응형 */
+@media (max-width: 500px) {
+  .gift-text {
+    font-size: 1.2rem;
+  }
+
+  .gift-grid {
+    grid-template-columns: repeat(2, 1fr); /* 화면이 좁으니 2열 */
+    gap: 16px;
+  }
+
+  .gift-item img {
+    width: 36vw;
+  }
+
+  .gift-item p {
+    font-size: 1rem;
+  }
+}
+
+
+/* (모바일 2단계) */
+@media (max-width: 431px) {
+  .gift-grid {
+    grid-template-columns: repeat(2, 1fr); /* 화면이 좁으니 2열 */
+    gap: 5px;
+  }
+  .gift-item>img {
+    width: 24vw;
+  }
+}
+
+@media (max-width: 376px) {
+  .gift-grid {
+    grid-template-columns: repeat(3, 1fr); /* 화면이 좁으니 2열 */
+    gap: 5px;
+  }
+  .gift-item>img {
+    width: 24vw;
+  }
+}

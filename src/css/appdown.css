@@ -1,0 +1,260 @@
+.appdown {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+/* 왼쪽섹션 */
+.appdown-left {
+    width: 35%;
+    height: 100vh;
+    background: rgba(42, 193, 188, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1vw;
+}
+.appdownload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.appdown-rowbox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.appdownload .app-icon {
+    border-radius: 40px;
+    width: 30vw;
+    max-width: 300px;
+}
+.appdownload .down-title {
+    font-size: clamp(1.5rem, 3vw, 3rem); 
+    text-align: center;
+    color: #222;
+}
+.appdownload .appdown-link {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 0 5px;
+    width: 25vw;
+    max-width: 250px;
+    transition: all 0.3s ease;
+}
+.appdownload .appdown-link:hover {
+  transform: scale(1.05);
+}
+
+
+/* 오른쪽섹션 */
+.appdown-right {
+    width: 70%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+.appdown-right .mockup-title {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 2%;
+}
+.mockup-swiper {
+    width: 80%;
+    height: 60vh;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.mockup-swiper img {
+    display: block;
+    width: 90%;       
+    max-width: 360px;
+    height: auto;
+    margin-top: 5%;
+}
+
+/* 목업 슬라이더 페이지네이션 css */
+.swiper-pagination-bullet {
+  background-color: #000; 
+  opacity: 0.4;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #2AC1BC;
+  opacity: 1;
+}
+
+.swiper-pagination {
+  position: relative; 
+  margin-top: 20px;
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+}
+
+/* 우측 하단 배민커넥트 */
+.rider-box {
+  position: absolute;
+  right: 2%;  
+  bottom: 0%;   
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.rider-box img {
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+}
+
+.connect-text {
+  font-size: 24px;
+  text-align: center; 
+}
+.connect-text a {
+  text-decoration: none;
+  color: #2AC1BC;
+}
+
+.bm-han-pro {letter-spacing: 1px;}
+
+
+/* 반응형 미디어쿼리 */
+/* ------------------- 반응형 ------------------- */
+@media screen and (max-width: 1024px) {
+  .appdownload .app-icon {
+    max-width: 200px !important;
+    aspect-ratio: 1/1;
+  }
+  .appdownload .appdown-link {
+    max-width: 200px;
+  }
+
+}
+
+/* 768px 이하 */
+@media screen and (max-width: 768px) {
+  .appdown {
+    flex-direction: column;
+  }
+  .appdown-left,
+  .appdown-right {
+    width: 100%;
+    height: auto;
+  }
+  .appdownload {
+    flex-direction: row;
+    gap: 50px;
+    margin: 60px 0 20px 0;
+  }
+
+  /* 오른쪽 목업슬라이더 */
+  .mockup-title {font-size: 40px !important;}
+  .mockup-swiper {
+    height: auto;
+    padding-bottom: 30px;
+  }
+  .mockup-swiper .swiper {
+    --swiper-slides-per-view: 3 !important; /* Swiper 설정 */
+  }
+
+  .appdownload .app-icon {
+    width: 40vw;
+  }
+
+  .appdownload .appdown-link {
+    width: 40vw;
+  }
+
+  .connect-text {
+    font-size: 20px;
+  }
+}
+
+/* 500px 이하 (모바일 적응형) */
+@media screen and (max-width: 500px) {
+  .appdownload .down-title {
+    font-size: 1.5rem;
+  }
+
+  .appdownload .appdown-link {
+    width: 70vw;
+  }
+
+  .mockup-swiper img {
+    width: 100%;
+  }
+
+  .mockup-title {
+    font-size: 1.8rem;
+  }
+
+  .connect-text {
+    font-size: 18px;
+  }
+}
+
+/* (모바일 2단계) */
+@media (max-width: 431px) {
+  .appdownload {gap: 30px;}
+  .appdownload .down-title {font-size: 1.5rem !important;}
+  .appdownload .appdown-link {
+    max-width: 120px !important;
+    border-radius: 10px;
+  }
+
+
+  .mockup-title {
+    font-size: 2rem !important;
+  }
+  .mockup-swiper img {
+    max-width: 230px !important;
+    margin: 0 auto;
+  }
+  .swiper-pagination {
+    display: none !important;
+  }
+
+  .rider-box img {
+    max-width: 220px;
+  }
+
+  .connect-text {
+    font-size: 18px;
+    text-align: center; 
+    background: rgba(255, 255, 255,.8);
+    padding: 5px;
+  }
+  .connect-text a {
+    text-decoration: none;
+    color: #000;
+  }
+}
+
+@media (max-width: 376px) {
+  .appdownload {gap: 20px;}
+  .appdown-rowbox {gap: 5px;}
+  .appdownload .app-icon {
+    max-width: 100px !important;
+  }
+  .appdownload .down-title {font-size: 1.2rem !important;}
+
+
+  .mockup-title {
+    font-size: 1.5rem !important;
+  }
+  .mockup-swiper img {
+    max-width: 150px !important;
+  }
+  .rider-box img {
+    max-width: 150px;
+  }
+}

@@ -1,0 +1,41 @@
+/* font */
+@font-face {
+  font-family: 'BM Hanna';
+  src: url('./fonts/BMHANNAAir_otf.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BM Hanna Pro';
+  src: url('./fonts/BMHANNAProOTF.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'BM Kiranghaerang';
+  src: url('./fonts/BMKIRANGHAERANG-OTF.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BM Jirou';
+  src: url('./fonts/BMEuljiro10yearslaterOTF.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'BM Kkubulim';
+  src: url('./fonts/BMKkubulim.woff') format('woff');
+}
+
+.bm-han-pro {font-family: 'BM Hanna Pro', sans-serif;}
+.bm-han-air {font-family: 'BM Hanna', sans-serif;}
+.bm-kku {font-family: 'BM Kkubulim', sans-serif;}
+.bm-jirou {font-family: 'BM Jirou', sans-serif;}
+.bm-kirang {font-family: 'BM Kiranghaerang', sans-serif;}
+
+* {margin: 0; padding: 0;}
+
+li {list-style: none;}
+a {text-decoration: none;}

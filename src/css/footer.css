@@ -1,0 +1,139 @@
+.footer {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* 배경 이미지 */
+.footer-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* 내용 컨테이너 */
+.footer-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+/* 왼쪽 상단 로고 */
+.footer-logo {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  width: 20vw;
+  max-width: 150px;
+  min-width: 100px;
+}
+.footer-logo img {
+  width: 100%;
+  height: auto;
+}
+
+/* 오른쪽 상단 SNS, 사이트 링크 */
+.f-righttop {
+  width: 100%;
+  max-width: 450px;
+  position: absolute;
+  top: 15%;
+  right: 0;
+  text-align: right;
+  overflow: hidden;
+}
+.sns {
+  display: flex;
+  gap: 3%;
+  justify-content: flex-end;
+}
+.sns li {
+  padding: 5px;
+}
+.sns li a {
+  color: white;
+  font-size: clamp(1rem, 2.5vw, 26px);
+}
+.sns li a:hover {
+  color: black;
+}
+.site {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 40px;
+}
+.site li a {
+  color: white;
+  font-size: clamp(1.2rem, 3vw, 32px);
+}
+.site li a:hover {
+  color: black;
+}
+
+/* 중앙 메인 문구 */
+.footer-main {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  font-size: clamp(2rem, 6vw, 7rem);
+  color: #000;
+  overflow: hidden;
+  padding: 0 10px;
+}
+.footer-word {
+  display: inline-block;
+  margin: 0 8px;
+  white-space: nowrap;
+}
+
+/* 왼쪽 하단 문구 */
+.f-leftbottom {
+  position: absolute;
+  bottom: 5%;
+  left: 1%;
+  color: #fff;
+  font-size: clamp(1rem, 2vw, 24px);
+}
+.flb-title {
+  font-weight: bold;
+}
+.flb-desc {
+  font-size: clamp(0.9rem, 1.5vw, 20px);
+}
+
+/* (모바일 2단계) */
+@media (max-width: 431px) {
+  .footer {overflow-x: hidden;}
+  .footer-main {
+    padding: 0 !important;
+    left: 0;
+  }
+  .sns {
+  display: flex;
+  gap: 0;
+  justify-content: flex-end;
+  }
+  .f-righttop>.sns>li>a, .f-righttop>.site>li>a {
+    color: #000;
+  }
+  .sns li a:hover,.site li a:hover {
+  scale: 1.1;
+  }
+  .f-leftbottom {
+    color: #000;
+    bottom: 5px;
+  }
+}
+
+@media (max-width: 376px) {
+
+}

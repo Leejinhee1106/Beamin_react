@@ -1,0 +1,120 @@
+.bmpay {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+/* 섹션 왼쪽 */
+.pay-left {
+    width: 50%;
+    height: 100vh;
+    background-color: rgba(42, 193, 188, 0.45);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pay-img {
+    width: 40vw;
+    max-width: 500px;
+}
+.pay-left>p {font-size:clamp(1.3rem, 6vw, 2.5rem);}
+
+/* 섹션 오른쪽*/
+.pay-right {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+}
+
+/* 페이머니 텍스트 */
+.pay-title {
+    font-size: clamp(1.5rem, 4vw, 4rem);
+    text-align: center;
+    line-height: 170%;
+    /* line-height: 90px; */
+}
+.pay-font-big {
+    font-size: 1.2em; 
+}
+.pay-subtitle {
+    text-align: center;
+    font-size: clamp(1rem, 2vw, 2.5rem);
+    color: #2ac1bc; 
+}
+.qr-text {
+    font-size: clamp(1rem, 2vw, 2rem);
+}
+
+/* 메이머니 이미지 */
+.pay-right >img {
+    width: 30vw;
+    max-width: 400px;
+}
+
+
+
+
+
+/* 반응형 미디어쿼리 */
+/* 768px 이하: 섹션 위아래 정렬 */
+@media (max-width: 768px) {
+  .bmpay {
+    flex-direction: column;
+    height: 100vh;
+  }
+  .pay-left,
+  .pay-right {
+    width: 100%;
+    height: auto;
+    padding: 40px 0;
+  }
+  .pay-img {
+    max-width: 200px;
+  }
+  .pay-right {
+    padding-top: 15%;
+  }
+  .pay-right > img {
+    width: 50vw;
+    max-width: 350px;
+  }
+}
+
+/* 500px 이하: 크기 조정 */
+@media (max-width: 500px) {
+  .pay-right > img {width: 60vw;}
+
+  .pay-title {font-size: 1.5rem;}
+
+  .pay-subtitle,
+  .qr-text {
+    font-size: 16px;
+  }
+}
+
+/* (모바일 2단계) */
+@media (max-width: 431px) {
+  /* 500이하랑 동일 */
+}
+
+@media (max-width: 376px) {
+  .pay-right {
+    padding-top: 10%;
+  }
+  .pay-title {font-size: 1.3rem;}
+  .pay-right > img {
+    width: 40vw;
+    max-width: 350px;
+  }
+  .pay-subtitle,
+  .qr-text {
+    font-size: 14px;
+  }
+}
