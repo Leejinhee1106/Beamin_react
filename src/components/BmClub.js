@@ -5,9 +5,11 @@ function BmClub() {
   return (
     <section className="bmclub">
       <article className='club-left'>
-        <img src='/images/section/club2.png' 
-        alt='배민클럽이미지(섹션용)'
-        className='club-img'/>
+        <img
+          src={`${process.env.PUBLIC_URL}/images/section/club2.png`} 
+          alt='배민클럽이미지(섹션용)'
+          className='club-img'
+        />
         <p className='bm-han-pro bm-title'>배민클럽</p>
       </article>
 
@@ -33,4 +35,4 @@ function BmClub() {
   );
 }
 
-export default BmClub
+export default BmClub;

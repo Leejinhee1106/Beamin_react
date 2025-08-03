@@ -5,13 +5,20 @@ import '../css/footer.css';
 function Footer() {
   return (
     <section className="footer">
-      <img className="footer-bg" src="/images/section/footer-bg.png" alt="footer background" />
+      <img 
+        className="footer-bg" 
+        src={`${process.env.PUBLIC_URL}/images/section/footer-bg.png`} 
+        alt="footer background" 
+      />
       {/* 나머지 컨텐츠 */}
       <div className="footer-content">
 
         {/* 로고 */}
         <div className="footer-logo">
-          <img src="/images/logo/logo-fff.png" alt="배민 로고 화이트" />
+          <img 
+            src={`${process.env.PUBLIC_URL}/images/logo/logo-fff.png`} 
+            alt="배민 로고 화이트" 
+          />
         </div>
 
         {/* 푸터 오른쪽 상단 */}
@@ -27,7 +34,7 @@ function Footer() {
               </a>
             </li>
             <li>
-              <a href='www.youtube.com/@baemin_official'
+              <a href='https://www.youtube.com/@baemin_official'
               target="_blank" 
               rel="noopener noreferrer">
                 유튜브

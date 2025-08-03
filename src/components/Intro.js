@@ -53,7 +53,7 @@ function Intro() {
         >
           {icons.map((icon, i) => (
             <SwiperSlide key={i}>
-              <img src={`/images/section/${icon}`} alt={`아이콘 ${i}`} />
+              <img src={`${process.env.PUBLIC_URL}/images/section/${icon}`} alt={`아이콘 ${i}`} />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -61,7 +61,7 @@ function Intro() {
 
       {/* 캐릭터 이미지 */}
       <div className="intro-character">
-        <img src="/images/section/face-character.svg" alt="배민 캐릭터" />
+        <img src={`${process.env.PUBLIC_URL}/images/section/face-character.svg`} alt="배민 캐릭터" />
       </div>
     </section>
   );

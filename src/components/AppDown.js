@@ -12,7 +12,7 @@ function AppDown() {
       <article className='appdown-left'>
         <div className='appdownload'>
           <img
-            src='/images/app/app-icon.webp'
+            src={`${process.env.PUBLIC_URL}/images/app/app-icon.webp`}
             alt='어플아이콘'
             className='app-icon'
           />
@@ -24,7 +24,7 @@ function AppDown() {
               target="_blank" 
               rel="noopener noreferrer">
               <img
-                src='/images/download/app_google.png'
+                src={`${process.env.PUBLIC_URL}/images/download/app_google.png`}
                 alt='구글 다운로드 링크'
                 className='appdown-link' />
             </a>
@@ -34,7 +34,7 @@ function AppDown() {
               target="_blank" 
               rel="noopener noreferrer">
               <img
-                src='/images/download/app_apple.png'
+                src={`${process.env.PUBLIC_URL}/images/download/app_apple.png`}
                 alt='애플 다운로드 링크'
                 className='appdown-link' />
             </a>
@@ -72,13 +72,12 @@ function AppDown() {
             {[...Array(6)].map((_, i) => (
               <SwiperSlide key={i}>
                 <img 
-                  src={`/images/app/app-${i + 1}-mockup.png`} 
+                  src={`${process.env.PUBLIC_URL}/images/app/app-${i + 1}-mockup.png`} 
                   alt={`목업${i + 1}`} 
                 />
               </SwiperSlide>
             ))}
           </Swiper>
-
         </div>
 
         {/* 라이더 애니메이션 */}
@@ -88,15 +87,15 @@ function AppDown() {
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ type: 'spring', duration: 2 }}
         >
-          <img src="/images/section/character.png" alt="배달 라이더" />
+          <img src={`${process.env.PUBLIC_URL}/images/section/character.png`} alt="배달 라이더" />
           <p className='bm-han-air connect-text'>
             라이더가 되고 싶다면?<br />
-           <a 
-            href="https://join.baeminconnect.com/" 
-            target="_blank" 
-            rel="noopener noreferrer">
-            배민커넥트 다운로드
-          </a>
+            <a 
+              href="https://join.baeminconnect.com/" 
+              target="_blank" 
+              rel="noopener noreferrer">
+              배민커넥트 다운로드
+            </a>
           </p>
         </motion.div>
       </article>

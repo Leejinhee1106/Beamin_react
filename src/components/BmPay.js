@@ -4,10 +4,12 @@ import '../css/pay.css';
 function BmPay() {
   return (
     <section className="bmpay">
-       <article className='pay-left'>
-        <img src='/images/section/payment.png' 
-        alt='배민페이'
-        className='pay-img'/>
+      <article className='pay-left'>
+        <img 
+          src={`${process.env.PUBLIC_URL}/images/section/payment.png`} 
+          alt='배민페이'
+          className='pay-img'
+        />
         <p className='bm-han-pro'>배민페이머니</p>
       </article>
 
@@ -22,9 +24,11 @@ function BmPay() {
           </p>
         </div>
         
-        <img src='/images/download/app_qr.png'
-        alt='큐알코드'
-        className='qr'/>
+        <img 
+          src={`${process.env.PUBLIC_URL}/images/download/app_qr.png`}
+          alt='큐알코드'
+          className='qr'
+        />
 
         <p className='qr-text'>배민페이로 결제하고 포인트 챙겨가자!</p>
       </article>

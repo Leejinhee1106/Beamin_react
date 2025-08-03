@@ -5,9 +5,11 @@ function BmGift() {
   return (
     <section className="bmgift">
       <article className='gift-left'>
-        <img src='/images/section/foryou.png' 
-        alt='선물박스'
-        className='gift-img'/>
+        <img 
+          src={`${process.env.PUBLIC_URL}/images/section/foryou.png`} 
+          alt='선물박스'
+          className='gift-img'
+        />
         <p className='bm-han-pro'>선물하기</p>
       </article>
 
@@ -27,7 +29,10 @@ function BmGift() {
             { src: 'Rectangle 6.png', label: '생일선물' },
           ].map((item, idx) => (
             <div className="gift-item" key={idx}>
-              <img src={`/images/gift-category/${item.src}`} alt={item.label} />
+              <img 
+                src={`${process.env.PUBLIC_URL}/images/gift-category/${item.src}`} 
+                alt={item.label} 
+              />
               <p className="bm-han-pro">{item.label}</p>
             </div>
           ))}
