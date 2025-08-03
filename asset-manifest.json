@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Beamin_react/static/css/main.c7a76109.css",
-    "main.js": "/Beamin_react/static/js/main.91f2bce9.js",
+    "main.js": "/Beamin_react/static/js/main.074be674.js",
     "static/media/BMEuljiro10yearslaterOTF.woff": "/Beamin_react/static/media/BMEuljiro10yearslaterOTF.f5db09a6fc4406975ddd.woff",
     "static/media/BMKkubulim.woff": "/Beamin_react/static/media/BMKkubulim.2e4db108b77ab2e6646b.woff",
     "static/media/BMKIRANGHAERANG-OTF.woff": "/Beamin_react/static/media/BMKIRANGHAERANG-OTF.a216707bb7bbda26f8a8.woff",
@@ -9,10 +9,10 @@
     "static/media/BMHANNAAir_otf.woff": "/Beamin_react/static/media/BMHANNAAir_otf.5b64a96a762d989296a7.woff",
     "index.html": "/Beamin_react/index.html",
     "main.c7a76109.css.map": "/Beamin_react/static/css/main.c7a76109.css.map",
-    "main.91f2bce9.js.map": "/Beamin_react/static/js/main.91f2bce9.js.map"
+    "main.074be674.js.map": "/Beamin_react/static/js/main.074be674.js.map"
   },
   "entrypoints": [
     "static/css/main.c7a76109.css",
-    "static/js/main.91f2bce9.js"
+    "static/js/main.074be674.js"
   ]
 }
